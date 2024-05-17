@@ -1,0 +1,127 @@
+[
+    {
+        "id": "79c829cd92259f47",
+        "type": "tab",
+        "label": "CycleTime",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a1",
+        "type": "inject",
+        "z": "79c829cd92259f47",
+        "name": "Start",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "start",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 190,
+        "y": 180,
+        "wires": [
+            [
+                "b1"
+            ]
+        ]
+    },
+    {
+        "id": "a2",
+        "type": "inject",
+        "z": "79c829cd92259f47",
+        "name": "Stop",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "stop",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 190,
+        "y": 240,
+        "wires": [
+            [
+                "b1"
+            ]
+        ]
+    },
+    {
+        "id": "a3",
+        "type": "inject",
+        "z": "79c829cd92259f47",
+        "name": "Reset",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "reset",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 190,
+        "y": 300,
+        "wires": [
+            [
+                "b1"
+            ]
+        ]
+    },
+    {
+        "id": "b1",
+        "type": "stopwatch",
+        "z": "79c829cd92259f47",
+        "name": "Stopwatch",
+        "x": 380,
+        "y": 240,
+        "wires": [
+            [
+                "debug1"
+            ]
+        ]
+    },
+    {
+        "id": "debug1",
+        "type": "debug",
+        "z": "79c829cd92259f47",
+        "name": "Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 550,
+        "y": 240,
+        "wires": []
+    }
+]
