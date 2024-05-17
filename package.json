@@ -1,5 +1,5 @@
 {
-  "name": "node-red-contrib-stop-watch",
+  "name": "@hj91/node-red-contrib-stop-watch",
   "version": "1.0.1",
   "description": "A Node-RED node that functions as a stopwatch, capable of starting, stopping, and resetting based on incoming messages.",
   "keywords": [
